@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>Sample of websocket with golang</title>
+    <script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+
+    <script>
+      $(function() {
+        var ws = new WebSocket("ws://localhost:8080/hub",['57klVCHGwbkimqPRvly6QmWfx7s2nPW6TaAisHQ9us6N7GMav4gIvm6y6bQ7']);
+        ws.onmessage = function(e) {
+          data = JSON.parse(e.data);
+          
+          $('<li>').text(data.Body).appendTo($ul);
+        };
+        var $ul = $('#msg-list');
+        $('#sendBtn').click(function(){
+          var data = {
+                'Prefix':'MM',
+                'From':{'Token' : '57klVCHGwbkimqPRvly6QmWfx7s2nPW6TaAisHQ9us6N7GMav4gIvm6y6bQ7'} ,
+                'Hub': 'SYSTEM',
+                'Channel': 'USER-LEVEL',
+                'To': {'Token':'57klVCHGwbkimqPRvly6QmWfx7s2nPW6TaAisHQ9us6N7GMav4gIvm6y6bQ7'} ,
+                'Body': $('#name').val(),
+                'Nostr': 'RAND-STR',
+                'CSC': 0,
+          }
+          ws.send(JSON.stringify(data));
+        });
+      });
+    </script>
+</head>
+<body>
+<input id="name" type="text"/>
+<input type="button" id="sendBtn" value="send"/>
+<ul id="msg-list"></ul>
+</body>
+</html>
