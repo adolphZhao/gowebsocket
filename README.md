@@ -19,3 +19,11 @@ go websocket proj
 可扩展支持渠道发送消息
 
 支持docker 
+
+#编译
+
+make 即可  
+
+如果要交叉编译 linux 服务器上的 执行 make linux 
+
+如果要编译 其它平台的 自己补下Makefile
