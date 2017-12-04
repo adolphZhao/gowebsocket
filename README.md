@@ -18,7 +18,7 @@ go websocket proj
 
 可扩展支持渠道发送消息
 
-支持docker 
+支持docker  (docker build -t websocket .)  
 
 #编译
 
