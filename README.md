@@ -47,11 +47,12 @@ type Message struct
 
 # 结构 
 
-config  配置文件package
-helper  公用帮助 package
-models  消息数据体 用户数据体
-msg     消息处理  package
-config.ini 配置文件
-server.*   wss 协议使用的证书
-Dockerfile   docker 文件
+config  配置文件package  
+helper  公用帮助 package  
+models  消息数据体 用户数据体 package  
+msg     消息处理  package  
+config.ini 配置文件  
+server.*   wss 协议使用的证书  
+Dockerfile   docker 文件  
+websocket.html  测试html
 
