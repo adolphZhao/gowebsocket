@@ -17,3 +17,5 @@ go websocket proj
 支持配置服务地址和端口
 
 可扩展支持渠道发送消息
+
+支持docker 
