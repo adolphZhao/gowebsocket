@@ -20,7 +20,7 @@ go websocket proj
 
 支持docker  (docker build -t websocket .)  
 
-#编译
+# 编译
 
 make 即可  
 
@@ -28,7 +28,7 @@ make 即可  
 
 如果要编译 其它平台的 自己补下Makefile
 
-#消息体
+# 消息体
 ```` go
 type Message struct 
 {
@@ -44,3 +44,14 @@ type Message struct
 } 
 
 ````
+
+# 结构 
+
+config  配置文件package
+helper  公用帮助 package
+models  消息数据体 用户数据体
+msg     消息处理  package
+config.ini 配置文件
+server.*   wss 协议使用的证书
+Dockerfile   docker 文件
+
